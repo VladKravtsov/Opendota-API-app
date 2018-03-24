@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {HeroService} from '../../services/hero.service';
+import {Hero} from '../../../../models/hero.model';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  heroes: Observable<Hero[]>;
 
-  ngOnInit() {
+  constructor(private heroService: HeroService) {
   }
 
+  ngOnInit() {
+    this.heroes = this.heroService.getHeroes();
+  }
 }

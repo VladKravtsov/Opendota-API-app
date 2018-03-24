@@ -9,7 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HeroesModule} from './modules/heroes/heroes.module';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import {appRoutes} from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatTabsModule,
     BrowserAnimationsModule,
     HeroesModule,

@@ -5,5 +5,9 @@ export const heroesRoutes: Routes = [
   {
     path: 'heroes',
     component: ListComponent
+  },
+  {
+    path: 'matches',
+    component: ListComponent
   }
 ];
